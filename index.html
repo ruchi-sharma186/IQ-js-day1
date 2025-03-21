@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Ques1. Difference between “ == “ and “ === “ operators.</h3>
+   <h3>1. == (Loose Equality / Abstract Equality):</h3>
+
+        <p>It compares two values for equality but performs type coercion if the values are of different types. 
+        This means it will attempt to convert one or both values to the same type before making the comparison.</p>
+        5 == '5'  // true, because '5' is coerced into the number 5 <br>
+        true == 1 // true, because true is coerced into the number 1
+
+<h3>2. === (Strict Equality):</h3>
+<p>It compares two values for equality without performing type coercion. 
+    Both the value and the type must be the same for it to return true.
+</p>
+5 === '5'  // false, because one is a number and the other is a string <br>
+true === 1 // false, because one is a boolean and the other is a number
+
+<h3>Ques2.What are the differences between var, let and const?</h3>
+<ul>
+    <h2>Var</h2>
+        <li>Scope: Function or global-scoped.</li>
+<li> Hoisting: Hoisted and initialized with undefined.</li>           
+           <li> Reassignable: Yes, can be reassigned and redeclared in the same scope.</li>
+    <h2>let</h2>
+    <li>Scope: Block-scoped.</li>
+       <li>Hoisting: Hoisted but not initialized (Temporal Dead Zone).</li>
+       <li>Reassignable: Yes, but cannot be redeclared in the same scope.</li>
+
+       <h2>const</h2>
+       <li>Scope: Block-scoped.</li>
+        <li>Hoisting: Hoisted but not initialized (Temporal Dead Zone).</li>
+        <li>Reassignable: No, cannot be reassigned or redeclared, but objects/arrays can be mutated</li>
+</ul>
+<h3>Ques3. What is execution context</h3>
+<p>An **execution context** is the environment in which JavaScript code is executed, containing the scope, 
+    variables, functions, and the `this` value at the time of execution.</p>
+
+<h3>Ques4.What is creation phase and execution phase.</h3>
+<p>The **Creation Phase** is when the JavaScript engine sets up the execution context, hoisting variables and functions, and determining the value of `this`. 
+    The **Execution Phase** is when the code is executed line by line, and variables are assigned their actual values.</p>
+
+    <h3>Ques5.What is hoisting?    </h3>
+<p>**Hoisting** is JavaScript's behavior of moving variable and function declarations to the top of their scope during the creation phase, allowing them to be used before they are actually declared in the code.
+     However, only the declarations are hoisted, not the initializations.</p>
+
+<h3> Ques6.Difference between undefined vs not defined vs NaN</h3>
+<pre>
+ 1. undefined:
+             A variable is declared but not assigned a value.
+            Example: let x; console.log(x); // undefined
+            not defined:
+
+2.not defined:      
+            Refers to a variable that hasn't been declared at all in the current scope.
+            Example: console.log(y); // ReferenceError: y is not defined
+            NaN (Not a Number):
+
+3.NaN (Not a Number):          
+            Represents a value that is not a valid number (often as a result of an invalid mathematical operation).
+            Example: console.log(0 / 0); // NaN
+    </pre>
+<h3> Ques7.How many operators do we have in JS ?</h3>
+<h3>JavaScript has 8 types of operators:</h3>
+<ol>
+    <li>Arithmetic operators (e.g., +, -, *, /)</li>
+       <li> Assignment operators (e.g., =, +=, -=)</li>
+        <li>Comparison operators (e.g., ==, ===, >, < )</li>
+        <li>Logical operators (e.g., &&, ||, !)</li>
+       <li> Bitwise operators (e.g., &, |, ^)</li>
+        <li>Unary operators (e.g., ++, --, typeof)</li>
+        <li>Ternary operator (e.g., condition ? expr1 : expr2)</li>
+        <li>Relational operators (e.g., in, instanceof)</li>
+</ol>
+<h3>Ques7.Explain Local Scope, Block Scope, Functional Scope and Scope Chain in javascript</h3>
+<pre>
+
+1. Local Scope:
+   - Refers to variables declared inside a function or block. These variables are only accessible within that specific function or block.
+
+2. Block Scope:
+   - Variables declared with `let` and `const` are **block-scoped**, meaning they are only accessible within the nearest enclosing `{}` block (e.g., inside loops, conditionals).
+
+3. Functional Scope:
+   - Variables declared inside a function are **function-scoped**, meaning they are only accessible within that function, and not outside it.
+
+4. Scope Chain:
+   - The scope chain is the hierarchy of scopes that JavaScript uses to look up variables. When a variable is accessed,
+    JavaScript looks through the current scope, then the outer scopes, all the way up to the global scope.
+    </pre>
+
+<script src="index.js"></script>
+</body>
+</html>
